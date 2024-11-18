@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body>
 
@@ -13,7 +15,7 @@
     <nav class="navbar">
         <div class="navbar-left">
             <div class="logo">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo">
+                <img src="{{ asset('images/logoresize.png') }}" alt="Logo">
             </div>
      
             <div class="hamburger" id="hamburger-icon">
@@ -61,10 +63,10 @@
 
 {{-- services --}}
 <h1 class="title">Why you should be one of Printpal’s Trusted Partners?</h1>
+<div class="background-image"></div> 
+ 
 <section class="services">
    
-    <div class="background-image"></div> 
- 
     <div class="service-box first-box">
         <img src="{{ asset('images/service-1.png') }}" alt="Service 1" class="service-image">
         <button class="service-button">Be our Partner</button>
@@ -91,6 +93,91 @@
         <p class="service-description">Leverage our integrated system for seamless order processing, tracking, and communication, saving you time and reducing administrative overhead.</p>
     </div>
 </section>
+
+{{-- about --}}
+<div class="background-image2"></div> 
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="{{ asset('images/aboutbg.png') }}" alt="About Us">
+        </div>
+        <div class="about-content">
+            <h1>We have been improving our quality of <span>Services</span> every now and then</h1>
+            <p>By choosing PrintPal, you are opting for a hassle-free, high-quality, and reliable printing service that prioritizes your satisfaction and convenience.</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </div>
+</section>
+
+{{-- Overview --}}
+<div class="overview-image2"></div> 
+<section class="overview-section">
+    <div class="overview-container">
+        <div class="overview-content">
+            <div class="overview-logo">
+                <img src="{{ asset('images/logoresize.png') }}" alt="Logo">
+            </div>
+            <p>
+                PrintPal is an innovative software platform that serves as an interactive hub for connecting users with a network of printing service providers. Its features include booking, browsing, and purchasing printing services with hassle-free, seamless, and time-saving processes while also ensuring transparency, reliability, and convenience for our users and partnered printing shops.
+            </p>
+            <button class="overview-button">Get Started</button>
+        </div>
+        <div class="overview-image">
+            <img src="{{ asset('images/overviewlogo.png') }}" alt="Overview Logo">
+        </div>
+    </div>
+</section>
+
+{{-- footer --}}
+
+<footer class="first-gradient">
+    <div>
+        <div>
+            <h1>About</h1>
+            <p> <b>PrintPal</b> aims to revolutionize the printing industry <br> by providing a platform for printing businesses to <br> streamline their services and enhance operational <br> efficiency. PrintPal supports the printing ecosystem <br> by offering solutions for both online and offline <br> orders, quality assurance, and customer satisfaction.</p>
+            <div>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <h3>Pages</h3>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Return Policy</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Refund & Cancellation Policies</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <h3>Printpal</h3>
+                <li><a href="">About Printpal</a></li>
+                <li><a href="">Sell on Printpal</a></li>
+                <li><a href="">Printpal Components</a></li>
+                <li><a href="">Printpal</a></li>
+                <li><a href="">TSP For Printpal</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Below gradient section -->
+<div class="new-gradient">
+    <div>
+        <img src="{{ asset('images/f1.png') }}" alt="Image 1">
+        <img src="{{ asset('images/f2.png') }}" alt="Image 2">
+    </div>
+    <div>
+        <p>Terms & Conditions || Privacy Policy</p>
+    </div>
+    <div>
+        <p>© Printpal. All Rights Reserved.</p>
+    </div>
+</div>
+
 
 
     <script>
