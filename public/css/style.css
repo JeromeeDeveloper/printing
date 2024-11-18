@@ -97,6 +97,7 @@ html {
     height: 100%;
     z-index: -1;
     object-fit: cover;
+    animation: scaleIn 5s infinite alternate; /* Dynamic background animation */
 }
 
 .hamburger {
@@ -220,12 +221,35 @@ html {
     box-sizing: border-box; 
     border: 1px solid black; 
     z-index: 1; /* Ensures it displays above the background */
+    animation: fadeIn 1.5s ease-out; /* Fade-in animation */
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 .hero_content img {
     max-width: 100%;
     height: auto;
+    animation: zoomIn 2s ease-out; /* Zoom-in animation */
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .hero_main h1 {
@@ -234,6 +258,18 @@ html {
     line-height: 5rem;
     position: relative;
     bottom: 4rem;
+    animation: slideInFromLeft 1.5s ease-out; /* Slide-in animation */
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .home_btn {
@@ -253,27 +289,32 @@ html {
     font-weight: bold;
     border-radius: 0.5rem;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Add transform for hover animation */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker box shadow */
 }
 
 .home_btn button:hover {
     background-color: #008CB3; /* Darken background on hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5); /* Even darker shadow on hover */
+    transform: scale(1.1); /* Scale button slightly on hover */
 }
 
 .text_contents p {
     position: relative;
     bottom: 4rem;
     font-weight: normal; /* Ensures the text is not bold */
+    animation: fadeInUp 1.5s ease-out; /* Fade-in up animation */
 }
 
-
-.text_contents {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    color: black;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Hero section adjustments for smaller screens */
@@ -302,7 +343,7 @@ html {
     .home_btn button {
         width: 100%; 
         padding: 0.5rem 1rem; 
-        font-size: 1rem; /
+        font-size: 1rem; 
     }
 
     .text_contents {
@@ -323,13 +364,14 @@ html {
 
     .home_btn button {
         font-size: 0.875rem; 
-        padding: 0.5rem; /
+        padding: 0.5rem; 
     }
 
     .text_contents {
         font-size: 1rem; 
     }
 }
+
 
 /* -------------------------------services--------------------------------- */
 
@@ -345,6 +387,7 @@ html {
     height: 72vh;
     color: white;
     overflow: hidden; 
+    animation: fadeIn 1s ease-out; /* Smooth entrance animation */
 }
 
 .background-image {
@@ -356,6 +399,7 @@ html {
     background: url(http://127.0.0.1:8000/images/bg2.png) no-repeat center center;
     background-size: cover;
     z-index: -1;
+    animation: scaleIn 5s infinite alternate; /* Dynamic background animation */
 }
 
 .background-image2 {
@@ -367,6 +411,7 @@ html {
     background: url(http://127.0.0.1:8000/images/bg2.png) no-repeat center center;
     background-size: cover;
     z-index: -1;
+    animation: scaleIn 5s infinite alternate; /* Dynamic background animation */
 }
 
 .service-box {
@@ -380,6 +425,9 @@ html {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     top: 0;
+    animation: slideUp 0.8s ease-in-out;
+    animation-delay: calc(0.2s * var(--service-index)); /* Staggered entrance */
+    animation-fill-mode: backwards; /* Wait for delay */
 }
 
 .service-box:nth-child(odd) {
@@ -447,6 +495,7 @@ html {
     height: auto;
     border-radius: 0.25rem;
     margin-bottom: 1rem;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 .service-title {
@@ -481,6 +530,39 @@ html {
 h1.title {
     padding: 0px 2rem;
 }
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
 
 /* -----------------------------about------------------------------------ */
 
@@ -718,6 +800,7 @@ h1.title {
     background: url(http://127.0.0.1:8000/images/bgoverview.png) no-repeat center center;
     background-size: cover;
     z-index: -1;
+    animation: scaleIn 5s infinite alternate; /* Dynamic background animation */
 }
 
 /* Footer Styling */
@@ -886,3 +969,15 @@ footer > div:last-child > div p:last-child {
         margin-right: 0.5rem;
     }
 }
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px); /* Offset slightly for entrance animation */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Bring back to original position */
+}
+

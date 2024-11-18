@@ -190,6 +190,34 @@
             navbarRight.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
+
+        // Select all elements you want to animate
+        const serviceBoxes = document.querySelectorAll('.service-box');
+
+        // Intersection Observer options
+        const observerOptions = {
+            root: null, // Use the viewport as the root
+            threshold: 0.1, // Trigger when 10% of the element is visible
+        };
+
+        // Create the Intersection Observer
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add 'visible' class when the element is in view
+                    entry.target.classList.add('visible');
+                    // Remove observer after animation to improve performance
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Apply the observer to each service box
+        serviceBoxes.forEach(box => {
+            box.classList.add('hidden'); // Add the hidden class initially
+            observer.observe(box); // Observe the element
+        });
+
     </script>
 </body>
 </html>
