@@ -56,7 +56,7 @@
         </div>
     </div>
     <div>
-         <img src="{{ asset('images/PRINTPAL (2) 1.png') }}" alt="">
+         <img src="{{ asset('images/rbanner.png') }}" alt="">
         </div>
     </div>
     </section>

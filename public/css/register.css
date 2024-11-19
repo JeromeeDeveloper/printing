@@ -149,6 +149,8 @@ body {
 @media (max-width: 768px) {
     .bottom-right-img {
         max-width: 126px;
+        bottom: 0;
+        right: 0;
     }
 
     .form-container {
