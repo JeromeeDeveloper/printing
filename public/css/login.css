@@ -1,0 +1,404 @@
+/* General Reset */
+body, h1, h2, p, ul, li, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Section Styling */
+.content-container {
+    display: flex;
+}
+
+/* Left Column */
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #00BBF5;
+    padding: 2rem;
+    max-width: 29rem;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+    color: #fff;
+    line-height: 2rem;
+}
+
+i{
+    color: white !important;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: #0056FF;
+}
+
+.feature-item h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Middle Column */
+.middle-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-image2 {
+    /* max-width: 100%; */
+    height: auto;
+    max-height: 300px;
+}
+
+/* Right Column */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(http://127.0.0.1:8000/images/bg4.png) no-repeat center center;
+    background-size: cover;
+    padding: 5rem;
+    gap: 2rem;
+}
+
+.login_title {
+    font-size: 3rem;
+}
+
+
+.form-container {
+    background: #70D8F9;
+    border-radius: 10px;
+    padding: 3rem 3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 410px;
+    text-align: left;
+    line-height: 4rem;
+
+}
+
+.form-container h1 {
+    margin-bottom: 1.5rem;
+    color: #0056FF;
+}
+
+form h2 {
+    margin-bottom: 1rem;
+}
+
+form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form .btn-login {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form .btn-login:hover {
+    background-color: #0041c4;
+}
+
+form p {
+    margin-top: 1rem;
+}
+
+form .signup-link {
+    color: #0056FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form .signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-section {
+        flex-wrap: wrap;
+    }
+
+    .left-column,
+    .middle-column,
+    .right-column {
+        flex: 1 1 100%;
+    }
+
+    .left-column,
+    .right-column {
+        padding: 1rem;
+    }
+
+    .features {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .center-image {
+        max-height: 200px;
+    }
+}
+
+i.fa.fa-dollar-sign.feature-icon {
+    width: 39px;
+}
+
+i.fa.fa-chart-line.feature-icon {
+    width: 38px;
+}
+
+.logo_login {
+    width: 208px;
+    height: 250px;
+    padding: 0px 10rem;
+    margin-top: 3rem;
+}
+
+input::placeholder {
+    color: #0041c4;
+}
+
+.center-image {
+    /* max-width: 100%; */
+    height: auto;
+    /* max-height: 300px; */
+    position: absolute;
+    bottom: 4rem;
+    width: 27rem;
+    /* right: 0; */
+    left: 26rem;
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(to right, #49D3FF 0%, #0056FF 100%);
+    color: white;
+    padding: 3rem 1.5rem;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+footer div div i {
+    font-size: 1.5rem; /* Size of the icons */
+    margin-right: 1rem; /* Space between icons */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+footer div div i:hover {
+    color: #3498db; /* Change color on hover */
+}
+
+/* Main footer container */
+footer > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 2rem; /* Adjusted for better space between sections */
+    padding: 0 2rem;
+}
+
+/* Footer section: company details */
+footer > div:first-child > div:first-child {
+    flex: 1;
+}
+
+footer > div:first-child > div:first-child h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer > div:first-child > div:first-child p {
+    margin-bottom: 1rem;
+}
+
+footer > div:first-child > div:first-child div {
+    display: flex;
+    gap: 1rem;
+  
+}
+
+/* Footer section: Pages and Printpal links */
+footer > div:first-child > div > ul {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+}
+
+footer > div:first-child > div > ul h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #ecf0f1;
+}
+
+footer > div:first-child > div > ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer > div:first-child > div > ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer > div:first-child > div > ul li a:hover {
+    color: #3498db; /* Change link color on hover */
+}
+
+/* Footer bottom section */
+footer > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15rem;
+}
+
+footer > div:last-child > div:first-child img {
+    width: 5rem;
+    margin-right: 1rem;
+}
+
+footer > div:last-child > div p {
+    font-size: 1rem;
+    color: #ecf0f1;
+}
+
+footer > div:last-child > div p:last-child {
+    font-weight: bold;
+}
+
+/* New Gradient Section */
+.new-gradient {
+    background: linear-gradient(to right, #457DEB 0%, #03163A 100%);
+    width: 100%; /* Ensure full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem; /* Adjust padding as needed */
+    color: #fff;
+}
+
+.new-gradient div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3rem;
+    gap: 1.75rem;
+}
+
+/* New Gradient Section Images */
+.new-gradient img {
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    footer > div:first-child {
+        flex-direction: column;
+        gap: 2rem; /* Adjusted gap for mobile view */
+    }
+
+    footer > div:first-child > div:first-child div {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer > div:first-child > div {
+        width: 100%; /* Ensure sections take full width */
+    }
+
+    footer > div:last-child {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer > div:last-child > div:first-child {
+        margin-bottom: 1rem;
+    }
+
+    footer > div:last-child > div p {
+        font-size: 0.875rem;
+    }
+
+    /* Adjust new-gradient section for mobile */
+    .new-gradient {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .new-gradient img {
+        width: 3rem;
+        margin-right: 0.5rem;
+    }
+}
+
+/* Responsive Design - Single Column */
+@media (max-width: 768px) {
+
+
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .content-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .center-image {
+        display: none;
+    }
+
+    .logo_login {
+        width: 169px;
+        height: 173px;
+        padding: 0px 7rem;
+    }
+
+    .login_title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+}

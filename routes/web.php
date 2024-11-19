@@ -8,7 +8,9 @@ use App\Http\Controllers\AuthController;
 // });
 
 Route::get('/', function () {
-    return view('home');
-});
+ return view('home');
+})->name('home');
 
-Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+
+Route::get('/login', [AuthController::class, 'login'])->name('login');

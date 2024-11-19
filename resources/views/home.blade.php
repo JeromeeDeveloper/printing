@@ -34,7 +34,7 @@
                     <img src="{{ asset('images/globe.png') }}" alt="Globe Icon">
                     <span>English</span>
                 </div>
-                <button class="login-button">Log In</button>
+                <button onclick="window.location='{{ route('login') }}'" class="login-button">Log In</button>
             </div>
         </div>
     </nav>

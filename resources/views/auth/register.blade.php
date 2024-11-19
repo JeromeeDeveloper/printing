@@ -11,7 +11,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <img src="{{ asset('images/logo.png') }}" alt="PrintPal Logo" class="logo">
+            <img onclick="window.location='{{ route('home') }}'" src="{{ asset('images/logo.png') }}" alt="PrintPal Logo" class="logo">
             <ul class="nav-links">
                 <li><a href="#">Overview</a></li>
                 <li><a href="#">Features</a></li>
@@ -34,7 +34,7 @@
                 <input type="tel" placeholder="Phone Number" required>
                 <button type="submit" class="btn-submit">Create</button>
             </form>
-            <p class="signin-text">Have a PrintPal Account? <a href="#" class="signin-link">Sign in</a></p>
+            <p class="signin-text">Have a PrintPal Account? <a href="{{route('login')}}" class="signin-link">Sign in</a></p>
         </div>
     </section>
 
