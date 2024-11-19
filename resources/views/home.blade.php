@@ -50,7 +50,7 @@
                 <p>Convenient, Seamless, High-Quality, Fast, and Easy.</p>
             </div>
             <div class="home_btn">
-                <button>Register as Costumer</button>
+                <button onclick="window.location='{{ route('register') }}'">Register as Costumer</button>
                 <button>Register as Owner</button>
             </div>
         </div>

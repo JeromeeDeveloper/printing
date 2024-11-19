@@ -1,0 +1,157 @@
+
+
+/* main form */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: linear-gradient(to right, #7FF3FB, #2093FE);
+    color: white;
+    padding: 2rem 0rem;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    background-color: white;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+/* Form Section */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+.form-container {
+    background: linear-gradient(to bottom, #739ef3 0%, #49D3FF 100%);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 4rem;
+    width: 100%;
+    max-width: 678px;
+    text-align: center;
+}
+
+.form-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.form-banner {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.account-form input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.account-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn-submit {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Sign-in Text */
+.signin-text {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+.signin-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signin-link:hover {
+    text-decoration: underline;
+}
+
+/* Bottom-right Image */
+.bottom-right-img {
+    position: absolute;
+    top: 53rem;
+    right: 10rem;
+    max-width: 300px;
+    height: auto;
+    z-index: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bottom-right-img {
+        max-width: 126px;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+}
