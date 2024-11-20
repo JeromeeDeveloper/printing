@@ -51,7 +51,7 @@
             </div>
             <div class="home_btn">
                 <button onclick="window.location='{{ route('register') }}'">Register as Costumer</button>
-                <button>Register as Owner</button>
+                <button onclick="window.location='{{ route('owner_register') }}'">Register as Owner</button>
             </div>
         </div>
     </div>

@@ -12,5 +12,6 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::get('/owner.register', [AuthController::class, 'owner_register'])->name('owner_register');
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
