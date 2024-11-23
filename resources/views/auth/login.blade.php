@@ -11,7 +11,6 @@
 <body>
     <section class="main-section">
         <div class="content-container">
-            <!-- Left Column -->
             <div class="left-column">
                 
                 <div class="features">
@@ -47,7 +46,6 @@
                 </div>
             </div>
 
-            <!-- Right Column -->
             <div class="right-column">
                 <div class="middle-column">
                     <img src="{{ asset('images/overviewlogo.png') }}" alt="Overview Logo" class="center-image">
@@ -58,6 +56,7 @@
                     <form action="#">
                         <h2>Sign in</h2>
                         <input type="email" placeholder="Enter your email" required>
+                        <input type="password" placeholder="Enter your password" required>
                         <button type="submit" class="btn-login">Login</button>
                         <p>New to PrintPal? <a href="{{ route('register')}}" class="signup-link">Create an account</a></p>
                     </form>

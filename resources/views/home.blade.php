@@ -65,7 +65,7 @@
 <h1 class="title">Why you should be one of Printpal’s Trusted Partners?</h1>
 <div class="background-image"></div> 
  
-<section class="services">
+<section id="overview" class="services">
    
     <div class="service-box first-box">
         <img src="{{ asset('images/service-1.png') }}" alt="Service 1" class="service-image">
@@ -96,7 +96,7 @@
 
 {{-- about --}}
 <div class="background-image2"></div> 
-<section class="about-section">
+<section id="features" class="about-section">
     <div class="about-container">
         <div class="about-image">
             <img src="{{ asset('images/aboutbg.png') }}" alt="About Us">
@@ -111,7 +111,7 @@
 
 {{-- Overview --}}
 <div class="overview-image2"></div> 
-<section class="overview-section">
+<section id="about" class="overview-section">
     <div class="overview-container">
         <div class="overview-content">
             <div class="overview-logo">
@@ -164,7 +164,7 @@
     </div>
 </footer>
 
-<!-- Below gradient section -->
+
 <div class="new-gradient">
     <div>
         <img src="{{ asset('images/f1.png') }}" alt="Image 1">
@@ -191,31 +191,31 @@
             hamburger.classList.toggle('active');
         });
 
-        // Select all elements you want to animate
+     
         const serviceBoxes = document.querySelectorAll('.service-box');
 
-        // Intersection Observer options
+ 
         const observerOptions = {
-            root: null, // Use the viewport as the root
-            threshold: 0.1, // Trigger when 10% of the element is visible
+            root: null, 
+            threshold: 0.1, 
         };
 
-        // Create the Intersection Observer
+    
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Add 'visible' class when the element is in view
+                   
                     entry.target.classList.add('visible');
-                    // Remove observer after animation to improve performance
+                  
                     observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Apply the observer to each service box
+
         serviceBoxes.forEach(box => {
-            box.classList.add('hidden'); // Add the hidden class initially
-            observer.observe(box); // Observe the element
+            box.classList.add('hidden'); 
+            observer.observe(box); 
         });
 
     </script>

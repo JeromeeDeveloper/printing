@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <style>
-        /* Hide all forms initially */
+    
         .form-container {
             display: none;
         }
 
-        /* Show the active form */
         .form-container.active {
             display: block;
         }
@@ -36,7 +35,7 @@
 <body>
     <section class="main-section">
         <div class="content-container">
-            <!-- Left Column -->
+        
             <div class="left-column">
                 
                 <div class="features">
@@ -72,9 +71,9 @@
                 </div>
             </div>
 
-           <!-- Right Column -->
+       
            <div class="right-column">
-            <!-- Form Step 1 -->
+        
             <div class="form-container active" id="step-1">
                 <form action="#">
                     <h2>Welcome to <span class="title">PrintPal</span></h2>
@@ -90,11 +89,10 @@
                     <label for="account">Bank Account</label>
                     <input type="text" name="account" id="" placeholder="Enter Bank Account">
                     <button type="submit" onclick="showNextForm('step-2')" class="btn-login">Next</button>
-                    <p>New to PrintPal? <a href="{{ route('register')}}" class="signup-link">Create an account</a></p>
+                    <p class="signin-text">Have a PrintPal Account? <a href="{{route('login')}}" class="signin-link">Sign in</a></p>
                 </form>
             </div>
 
-            <!-- Form Step 2 -->
             <div class="form-container" id="step-2">
                 <form>
                     <h2>Get your Business<span class="title">Started</span></h2>
@@ -113,16 +111,16 @@
             </div>
 
           
-            <!-- Form Step 3 -->
+         
             <div class="form-container" id="step-3">
-                <!-- Search Bar -->
+               
                 <div class="search-bar">
                     <input type="text" id="search-input" placeholder="Search categories..." oninput="filterCategories()">
                 </div>
             
-                <!-- Categories Row -->
+               
                 <div id="categories-row" class="categories-row">
-                    <!-- Business Category -->
+            
                     <div class="category" data-name="business">
                         <label onclick="toggleDropdown(this)">Business</label>
                         <div class="category-items dropdown">
@@ -132,7 +130,7 @@
                         </div>
                     </div>
             
-                    <!-- Educational Category -->
+                
                     <div class="category" data-name="educational">
                         <label onclick="toggleDropdown(this)">Educational</label>
                         <div class="category-items dropdown">
@@ -142,7 +140,7 @@
                         </div>
                     </div>
             
-                    <!-- Publishing Category -->
+                 
                     <div class="category" data-name="publishing">
                         <label onclick="toggleDropdown(this)">Publishing</label>
                         <div class="category-items dropdown">
@@ -151,8 +149,7 @@
                             <label><input type="checkbox" value="journals"> Journals</label>
                         </div>
                     </div>
-            
-                    <!-- Event and Hospitality Category -->
+     
                     <div class="category" data-name="event-and-hospitality">
                         <label onclick="toggleDropdown(this)">Event & Hospitality</label>
                         <div class="category-items dropdown">
@@ -162,7 +159,7 @@
                         </div>
                     </div>
             
-                    <!-- Industrial Painting Category -->
+            
                     <div class="category" data-name="industrial-painting">
                         <label onclick="toggleDropdown(this)">Industrial Painting</label>
                         <div class="category-items dropdown">
@@ -172,7 +169,7 @@
                         </div>
                     </div>
             
-                    <!-- Photo Pricing Category -->
+                
                     <div class="category" data-name="photo-pricing">
                         <label onclick="toggleDropdown(this)">Photo Pricing</label>
                         <div class="category-items dropdown">
@@ -182,7 +179,7 @@
                         </div>
                     </div>
             
-                    <!-- Art and Design Category -->
+              
                     <div class="category" data-name="art-and-design">
                         <label onclick="toggleDropdown(this)">Art & Design</label>
                         <div class="category-items dropdown">

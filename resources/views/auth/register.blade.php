@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 </head>
 <body>
-    <!-- Navigation Bar -->
+  
     <nav class="navbar">
         <div class="nav-container">
             <img onclick="window.location='{{ route('home') }}'" src="{{ asset('images/logo.png') }}" alt="PrintPal Logo" class="logo">
@@ -20,7 +20,7 @@
         </div>
     </nav>
 
-    <!-- Form Section -->
+  
     <section class="form-section">
         <div class="form-container">
             <h1>Create an Account</h1>
