@@ -2,14 +2,18 @@
 
 @section('content')
   
-    <div class="top-bar">
+<div class="top-bar">
+    <div class="search-bar-dashboard">
+        <span class="search-icon">
+            <i class="fas fa-search"></i>
+        </span>
         <input type="text" class="search-bar" placeholder="Search...">
-        <div class="icons">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-bell"></i>
-        </div>
     </div>
-
+    <div class="icons">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-bell"></i>
+    </div>
+</div>
 
     <h1>Overall Sales</h1>
 

@@ -5,8 +5,11 @@
    
     <div class="top-bar">
  
-        <div class="search-bar">
-            <input type="text" placeholder="Search products...">
+        <div class="search-bar-dashboard">
+            <span class="search-icon">
+                <i class="fas fa-search"></i> 
+            </span>
+            <input type="text" placeholder="Search...">
         </div>
 
        

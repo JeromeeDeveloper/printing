@@ -4,12 +4,18 @@
     <div class="add-service-page">
 
         <div class="add-service-top-bar">
-            <input type="text" class="add-service-search-bar" placeholder="Search...">
+            <div class="search-bar-dashboard">
+                <span class="search-icon">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" class="add-service-search-bar" placeholder="Search...">
+            </div>
             <div class="add-service-icons">
                 <i class="fas fa-moon"></i>
                 <i class="fas fa-bell"></i>
             </div>
         </div>
+        
 
         <h1>Add Service</h1>
 

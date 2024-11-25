@@ -4,12 +4,18 @@
     <div class="profile-page">
   
         <div class="profile-top-bar">
-            <input type="text" class="profile-search-bar" placeholder="Search...">
+            <div class="search-bar-dashboard">
+                <span class="search-icon">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" class="profile-search-bar" placeholder="Search...">
+            </div>
             <div class="profile-icons">
                 <i class="fas fa-moon"></i>
                 <i class="fas fa-bell"></i>
             </div>
         </div>
+        
 
    
         <h1>Profile</h1>
